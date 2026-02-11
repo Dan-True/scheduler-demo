@@ -19,6 +19,12 @@ namespace SchedulerDemo.Solver.Solver
 
         public Task<SolveResult> SolveAsync(SolveRequest request, CancellationToken token)
         {
+            // TODO - this solver has NOT been performance optimized or made data-oriented in any way.
+            // It’s a straightforward backtracking search with some very basic heuristics. It’s really just a starting point for experimentation and demonstration.
+
+            // First point for better performance would be to exchange all the lists and reference types for data-oriented structures (arrays, structs, spans, etc) to reduce allocations and GC overhead.
+            // Then we can add more advanced heuristics, caching of intermediate results, etc.
+
             // Build slots to fill
             var slots = BuildSlots(request);
 
