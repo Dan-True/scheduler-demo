@@ -29,7 +29,6 @@ namespace SchedulerDemo.Solver.Models
         public bool IsWorkerAssignedToDate(string workerId, DateOnly date)
         {
             // Placeholder for “max 1 shift per day”, etc. Keep it simple for now.
-            // You can replace this with a more efficient index later.
             var prefix = $"{date:yyyy-MM-dd}:";
             return Assigned.Any(kv => kv.Value == workerId && kv.Key.StartsWith(prefix, StringComparison.Ordinal));
         }
