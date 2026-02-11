@@ -184,6 +184,7 @@ namespace SchedulerDemo.Solver.Solver
 
                 if (_rules.IsValidPartial(state, request.RulesetId))
                 {
+                    // The recursion magic!
                     if (Search(request, slots, state, token))
                         return true;
                 }
