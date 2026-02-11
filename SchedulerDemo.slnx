@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ChessDemo/SchedulerDemo.csproj" />
+  <Project Path="SchedulerDemo.Scheduler/SchedulerDemo.Scheduler.csproj" Id="afa47961-66a4-4a40-9886-613372672384" />
+  <Project Path="SchedulerDemo.Solver/SchedulerDemo.Solver.csproj" Id="3a0ed61c-53af-4c02-951c-a4d26e04510e" />
+  <Project Path="SchedulerDemo.Tests/SchedulerDemo.Tests.csproj" Id="0d2dc6a1-f879-4022-926b-680345d943c7" />
+</Solution>
