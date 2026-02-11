@@ -33,6 +33,11 @@ namespace SchedulerDemo.Solver.Solver
             if (!ApplyPreassignments(request, slots, state, out var preassignFailure))
                 return Task.FromResult(new SolveResult { Success = false, FailureReason = preassignFailure });
 
+
+            // NOTE: Search and many other of the subsequent helper functions they call take stateful variables and manipulate them, rather than a functional style of pure functions.
+            // This is intended and to avoid incessant copying of state - we want to mutate the state as we go and backtrack on it, rather than copying it at each step. This is a common pattern in backtracking search algorithms.
+            // BUt it does make the solver hard to e.g. unit-test in parts, and hence it has been tested as a whole.
+
             // Solve remaining
             var ok = Search(request, slots, state, token);
 
