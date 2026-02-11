@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChessDemo\SchedulerDemo.csproj" />
     <ProjectReference Include="..\SchedulerDemo.Solver\SchedulerDemo.Solver.csproj" />
+    <ProjectReference Include="..\SchedulerDemo\SchedulerDemo.csproj" />
   </ItemGroup>
 
   <ItemGroup>
